@@ -25,15 +25,16 @@ Upload any contract and within seconds you get a plain-English summary, colour-c
 
 ## Built With
 
-- HTML, CSS, JavaScript
-- [Claude API](https://anthropic.com) — AI document analysis and chat
-- [Supabase](https://supabase.com) — authentication and document storage
+- React and TypeScript
+- Vite
+- Tailwind CSS
+- Existing Clausify CSS visual system
 
 ---
 
 ## Status
 
-Currently in active development. Core product is functional end to end — analysis, risk flagging, and AI chat are all working. Auth and document storage via Supabase are integrated.
+Currently in frontend development. Analysis, risk flagging, chat, and auth interactions use local frontend demo state until the backend is added back.
 
 Upcoming: document history page, subscription/pricing layer, and mobile optimisation.
 

@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
+  /* Type stacks — Inter / Playfair Display / JetBrains Mono with high-quality
+     system fallbacks so the page never falls back to a generic font. */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+               Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --font-serif: 'Playfair Display', 'Iowan Old Style', 'Apple Garamond',
+                Baskerville, 'Times New Roman', 'Droid Serif', Times, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo,
+               Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
   --black:    #080808;
   --black2:   #101010;
   --black3:   #181818;
@@ -29,7 +38,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   background: var(--black);
   color: var(--cream);
   overflow-x: hidden;
@@ -46,7 +55,7 @@ body {
 #loader.hide { opacity: 0; visibility: hidden; }
 
 .loader-logo {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: clamp(48px, 10vw, 96px);
   font-weight: 900;
   letter-spacing: -3px;
@@ -110,7 +119,7 @@ nav {
 nav.visible { opacity: 1; }
 
 .nav-logo {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 20px;
   font-weight: 900;
   letter-spacing: -0.5px;
@@ -198,7 +207,7 @@ nav.visible { opacity: 1; }
 }
 
 h1.hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: clamp(40px, 7vw, 82px);
   font-weight: 900;
   line-height: 1.0;
@@ -270,7 +279,7 @@ h1.hero-title strong { color: var(--gold2); font-style: normal; }
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: clamp(28px, 4vw, 46px);
   font-weight: 900; letter-spacing: -1.5px;
   color: var(--cream); line-height: 1.1; margin-bottom: 16px;
@@ -314,7 +323,7 @@ h1.hero-title strong { color: var(--gold2); font-style: normal; }
 .how-card:hover::before { opacity: 1; }
 
 .how-num {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px; font-weight: 500; color: var(--gold);
   letter-spacing: 0.08em; margin-bottom: 16px;
   display: flex; align-items: center; gap: 8px;
@@ -355,7 +364,7 @@ h1.hero-title strong { color: var(--gold2); font-style: normal; }
   flex-wrap: wrap; gap: 12px;
 }
 .tool-header-left h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 22px; font-weight: 900;
   letter-spacing: -0.6px; color: var(--cream);
 }
@@ -417,7 +426,7 @@ textarea {
   padding: 14px 16px;
   font-size: 13px; color: var(--cream);
   resize: vertical; min-height: 100px;
-  outline: none; font-family: 'Inter', sans-serif;
+  outline: none; font-family: var(--font-sans);
   line-height: 1.65; margin-bottom: 16px;
   transition: border-color 0.15s;
 }
@@ -463,7 +472,7 @@ textarea::placeholder { color: var(--cream4); }
   margin-bottom: 20px; flex-wrap: wrap; gap: 10px;
 }
 .res-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 20px; font-weight: 900;
   letter-spacing: -0.5px; color: var(--cream);
 }
@@ -511,7 +520,7 @@ textarea::placeholder { color: var(--cream4); }
   text-transform: uppercase; color: var(--cream4); margin-bottom: 4px;
 }
 .risk-score-big {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 32px; font-weight: 900; letter-spacing: -1px;
 }
 .risk-score-big.high { color: var(--high); }
@@ -652,7 +661,7 @@ textarea::placeholder { color: var(--cream4); }
   border-radius: 11px;
   padding: 10px 14px;
   font-size: 13px; color: var(--cream);
-  outline: none; font-family: 'Inter', sans-serif;
+  outline: none; font-family: var(--font-sans);
   transition: border-color 0.15s;
 }
 .chat-input:focus { border-color: var(--gold-bdr); }
@@ -702,7 +711,7 @@ footer {
   flex-wrap: wrap; gap: 12px;
 }
 .footer-logo {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 16px; font-weight: 900;
   color: var(--cream); letter-spacing: -0.3px;
 }
@@ -769,7 +778,7 @@ footer {
 /* ── MODAL HEADER ─────────────────────────────────────────── */
 
 .auth-logo {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 22px; font-weight: 900;
   letter-spacing: -0.5px; color: var(--cream);
   text-align: center; margin-bottom: 4px;
@@ -818,7 +827,7 @@ footer {
   border: 1px solid rgba(255,255,255,0.09);
   border-radius: 10px; font-size: 14px;
   color: var(--cream); outline: none;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   transition: border-color 0.15s;
 }
 .auth-field input:focus { border-color: var(--gold-bdr); }
@@ -875,7 +884,7 @@ footer {
   font-size: 14px; font-weight: 800;
   cursor: pointer; margin-bottom: 14px;
   transition: background 0.15s, transform 0.1s;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
 }
 .auth-btn-primary:hover   { background: var(--gold2); }
 .auth-btn-primary:active  { transform: scale(0.99); }
@@ -889,7 +898,7 @@ footer {
   cursor: pointer; margin-bottom: 8px;
   display: flex; align-items: center; justify-content: center; gap: 9px;
   transition: background 0.15s, border-color 0.15s;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
 }
 .auth-btn-google:hover { background: #222; border-color: rgba(255,255,255,0.15); }
 
@@ -932,7 +941,7 @@ footer {
   margin: 0 auto 16px;
 }
 .auth-confirm h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 18px; font-weight: 900;
   color: var(--cream); margin-bottom: 8px; letter-spacing: -0.3px;
 }
@@ -957,7 +966,7 @@ footer {
   color: var(--gold2); font-size: 13px; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; transition: border-color 0.15s;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   user-select: none;
 }
 .nav-avatar:hover { border-color: var(--gold); }
